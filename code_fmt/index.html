@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Source File Highlighter</title>
+  <script>
+  function showfiles() {
+    let u = 'show.php?userid='+document.getElementById('userid').value+'&projectid='+document.getElementById('projectid').value;
+    window.location=u;
+  }
+  </script>
+</head>
+<body>
+  <h1>Srouce File Highlighter</h1>
+  <form method="POST" enctype="multipart/form-data" action="queue.php">
+    UserID: <input type="text" name="userid" id="userid"><br>
+    ProjectID: <input type="text" name="projectid" id="projectid"><br>
+    File: <input type="file" name="srcfile"><br>
+    <input type="submit" value="Upload for Highlighting">
+  </form>
+  <button onclick="showfiles()">Show Project Files</button>
+</body>
+</html>
